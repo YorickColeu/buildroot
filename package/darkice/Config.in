@@ -1,0 +1,8 @@
+config BR2_PACKAGE_DARKICE
+    bool "darkice"
+  	depends on BR2_PACKAGE_GSTREAMER1
+    help
+      DarkIce is a live audio streamer. It records audio from an audio interface (e.g. sound card), encodes it and sends it to a streaming server. 
+      see http://www.darkice.org/ for more on this software
+
+
