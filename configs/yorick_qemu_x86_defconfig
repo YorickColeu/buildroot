@@ -1,0 +1,33 @@
+# Architecture
+BR2_i386=y
+BR2_x86_pentiumpro=y
+
+# System
+BR2_SYSTEM_DHCP="eth0"
+BR2_TARGET_GENERIC_GETTY_PORT="ttyS0"
+
+# Filesystem
+BR2_TARGET_ROOTFS_EXT2=y
+# BR2_TARGET_ROOTFS_TAR is not set
+
+# Linux headers same as kernel, a 4.16 series
+BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_16=y
+
+# Kernel
+BR2_LINUX_KERNEL=y
+BR2_LINUX_KERNEL_CUSTOM_VERSION=y
+BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE="4.16.7"
+BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
+BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="board/qemu/x86/linux.config"
+
+# VLC toolchain
+BR2_TOOLCHAIN_BUILDROOT_WCHAR=y                                                                                                                     
+BR2_TOOLCHAIN_BUILDROOT_CXX=y                                                                                                                       
+BR2_USE_WCHAR=y                                                                                                                                     
+BR2_INSTALL_LIBSTDCPP=y 
+
+# VLC
+
+BR2_PACKAGE_LIBXML2=y
+BR2_PACKAGE_VLC=y
+BR2_ROOTFS_OVERLAY="board/yorick/rootfs_overlay"
